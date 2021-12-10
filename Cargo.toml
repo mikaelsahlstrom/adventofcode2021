@@ -1,5 +1,6 @@
 [package]
 name = "advent_of_code2021"
+description = "Advent of Code 2021"
 version = "0.1.0"
 edition = "2021"
 authors = ["Mikael Sahlström <mick.sahlstrom@gmail.com>"]
@@ -7,6 +8,7 @@ authors = ["Mikael Sahlström <mick.sahlstrom@gmail.com>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+clap = "2.34.0"
 
 [profile.dev]
 opt-level = 0

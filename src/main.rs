@@ -3,7 +3,7 @@ extern crate clap;
 use clap::{Arg, App};
 
 mod day1;
-
+mod day2;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 const NAME: &'static str = env!("CARGO_PKG_NAME");
@@ -37,6 +37,7 @@ fn main()
     {
         "1" =>
         {
+            println!("Day 1");
             match part
             {
                 "1" => day1::part1(),
@@ -49,10 +50,27 @@ fn main()
                 _ => ()
             }
         },
+        "2" =>
+        {
+            println!("Day 2");
+            match part
+            {
+                "1" => day2::part1(),
+                "all" =>
+                {
+                    day2::part1();
+                },
+                _ => ()
+            }
+        },
         "all" =>
         {
+            println!("Day 1");
             day1::part1();
             day1::part2();
+
+            println!("Day 2");
+            day2::part1();
         }
         _ => ()
     }

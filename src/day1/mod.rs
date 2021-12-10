@@ -1,10 +1,8 @@
-use std::fs::File;
-use std::io::{self, BufRead};
-use std::path::Path;
+use crate::utils;
 
 pub fn part1()
 {
-    if let Ok(lines) = read_lines("./src/day1/input")
+    if let Ok(lines) = utils::read_lines("./src/day1/input")
     {
         let mut amount: u32 = 0;
         let mut last: u32 = std::u32::MAX;
@@ -28,7 +26,7 @@ pub fn part1()
 
 pub fn part2()
 {
-    if let Ok(lines) = read_lines("./src/day1/input")
+    if let Ok(lines) = utils::read_lines("./src/day1/input")
     {
         let mut buf: [u32; 4] = [0; 4];
         let mut amount: u32 = 0;
@@ -66,11 +64,4 @@ pub fn part2()
 
         println!("part 2: {}", amount);
     }
-}
-
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where P: AsRef<Path>,
-{
-    let file = File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
 }

@@ -2,6 +2,7 @@ extern crate clap;
 
 use clap::{Arg, App};
 
+mod utils;
 mod day1;
 mod day2;
 

@@ -1,10 +1,8 @@
-use std::fs::File;
-use std::io::{self, BufRead};
-use std::path::Path;
+use crate::utils;
 
 pub fn part1()
 {
-    if let Ok(lines) = read_lines("./src/day2/input")
+    if let Ok(lines) = utils::read_lines("./src/day2/input")
     {
         let mut h_pos: u32 = 0;
         let mut d_pos: u32 = 0;
@@ -48,11 +46,4 @@ pub fn part1()
 
         println!("part 1: {}", h_pos * d_pos);
     }
-}
-
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where P: AsRef<Path>,
-{
-    let file = File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
 }

@@ -57,9 +57,11 @@ fn main()
             match part
             {
                 "1" => day2::part1(),
+                "2" => day2::part2(),
                 "all" =>
                 {
                     day2::part1();
+                    day2::part2();
                 },
                 _ => ()
             }
@@ -72,6 +74,7 @@ fn main()
 
             println!("Day 2");
             day2::part1();
+            day2::part2();
         }
         _ => ()
     }

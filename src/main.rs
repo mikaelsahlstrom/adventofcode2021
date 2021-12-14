@@ -5,6 +5,7 @@ use clap::{Arg, App};
 mod utils;
 mod day1;
 mod day2;
+mod day3;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 const NAME: &'static str = env!("CARGO_PKG_NAME");
@@ -66,6 +67,19 @@ fn main()
                 _ => ()
             }
         },
+        "3" =>
+        {
+            println!("Day 3");
+            match part
+            {
+                "1" => day3::part1(),
+                "all" =>
+                {
+                    day3::part1();
+                },
+                _ => ()
+            }
+        }
         "all" =>
         {
             println!("Day 1");
@@ -75,6 +89,9 @@ fn main()
             println!("Day 2");
             day2::part1();
             day2::part2();
+
+            println!("Day 3");
+            day3::part1();
         }
         _ => ()
     }

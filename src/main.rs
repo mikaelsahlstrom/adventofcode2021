@@ -6,6 +6,7 @@ mod utils;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 const NAME: &'static str = env!("CARGO_PKG_NAME");
@@ -82,6 +83,19 @@ fn main()
                 _ => ()
             }
         }
+        "4" =>
+        {
+            println!("Day 4");
+            match part
+            {
+                "1" => day4::part1(),
+                "all" =>
+                {
+                    day4::part1();
+                },
+                _ => ()
+            }
+        },
         "all" =>
         {
             println!("Day 1");

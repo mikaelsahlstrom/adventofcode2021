@@ -109,6 +109,9 @@ fn main()
             println!("Day 3");
             day3::part1();
             day3::part2();
+
+            println!("Day 4");
+            day4::part1();
         }
         _ => ()
     }
